@@ -2,10 +2,10 @@ letsencrypt:
   build: .
   container_name: letsencrypt
   expose:
-    - 80
+    - "8089:80"
   volumes:
-    - /certs:/certs
+    - ~/docker-registry/certs:/certs
   restart: always
   environment:
-    - DOMAINS=domain1.com domain2.com
-    - EMAIL=webmaster@domain1.com
+    - DOMAINS=ninja.deals
+    - EMAIL=contact@ninja.deals
