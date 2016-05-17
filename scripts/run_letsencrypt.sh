@@ -1,7 +1,7 @@
 for d in $DOMAINS
 do
  echo "Running letsencrypt for $d"
- letsencrypt --standalone --standalone-supported-challenges\
+ certbot --standalone --standalone-supported-challenges\
   http-01 --agree-dev-preview --agree-tos --renew-by-default\
   --server https://acme-v01.api.letsencrypt.org/directory\
   --email $EMAIL -d $d certonly
