@@ -4,7 +4,7 @@ letsencrypt:
   ports:
     - "8089:80"
   volumes:
-    - ~/docker-registry/certs:/certs
+    - ../certs:/certs
   restart: always
   environment:
     - DOMAINS=ninja.deals
